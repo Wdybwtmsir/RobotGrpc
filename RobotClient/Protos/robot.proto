@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "RobotGrpc";
+
+package robot;
+
+service RobotService {
+  rpc Control (stream ClientCommand) returns (stream ServerStatus);
+}
+
+
+message ClientCommand {
+  string command = 1;  
+  int32 speed = 2;     
+}
+
+
+message ServerStatus {
+  string status = 1;    
+  string message = 2;   
+  Position position = 3; 
+}
+
+
+message Position {
+  int32 x = 1;
+  int32 y = 2;
+}
