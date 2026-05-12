@@ -9,7 +9,7 @@ class Program
     static async Task Main(string[] args)
     {
   
-        using var channel = GrpcChannel.ForAddress("https://192.168.122.68");
+        using var channel = GrpcChannel.ForAddress("http://192.168.122.68:5001");
         var client = new RobotService.RobotServiceClient(channel);
 
         Console.WriteLine("Подключаемся к роботу...");
