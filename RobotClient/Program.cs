@@ -100,11 +100,6 @@ class Program
             {
                 Console.WriteLine($"Внутренняя ошибка: {ex.InnerException.Message}");
             }
-            Console.WriteLine("\nПроверьте:");
-            Console.WriteLine("1. Сервер запущен на http://192.168.122.68:5000");
-            Console.WriteLine("2. Сервер сконфигурирован на HTTP/2");
-            Console.WriteLine("3. Брандмауэр не блокирует порт 5000");
-            Console.ReadLine();
         }
     }
 
